@@ -38,7 +38,7 @@ function HowItWorks({ }: Props) {
                         </View>
                         <View className="flex flex-col gap-3 sm:w-1/2 lg:w-full py-6">
                             <Text className="font-bold">3. Return</Text>
-                            <Text>{"Simply send the item back to us using the pre-paid returns label, and we'll take care of the dry cleaning."}</Text>
+                            <Text>Simply send the item back to us using the pre-paid returns label, and we&apos;ll take care of the dry cleaning.</Text>
                         </View>
                     </View>
                 </View>
