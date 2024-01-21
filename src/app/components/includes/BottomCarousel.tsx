@@ -42,7 +42,7 @@ function BottomCarousel({ title }: Props) {
                         {
                             counts.map((item, index) => {
                                 return (
-                                    <SwiperSlide className="p-3">
+                                    <SwiperSlide key={index} className="p-3">
                                         <ProductCard />
                                     </SwiperSlide>
                                 )

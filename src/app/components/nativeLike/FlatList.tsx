@@ -68,7 +68,7 @@ const Boundary = ({ onIntercept }:any) => {
     return () => {
       if (currentTarget) observer.unobserve(currentTarget)
     }
-  }, [ref.current, options])
+  }, [ref.current === null, options])
 
   return (
     <div ref={ref} className={`Boundary`}>
@@ -111,7 +111,7 @@ const Item = ({ children, onIntercept }: {
     return () => {
       if (currentTarget) observer.unobserve(currentTarget)
     }
-  }, [ref.current, options])
+  }, [ref.current == null, options])
 
   return (
     <div ref={ref} className={`infinite-scroll-item`}>
