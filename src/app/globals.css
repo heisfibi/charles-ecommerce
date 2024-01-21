@@ -16,7 +16,7 @@
   font-style: normal;
 }
 
-.container {
+.my-container {
   @apply w-full lg:w-[940px] xl:w-[1175px] 2xl:w-[1328px]
 }
 

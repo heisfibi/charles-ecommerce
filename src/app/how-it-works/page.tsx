@@ -17,7 +17,7 @@ function HowItWorks({ }: Props) {
                 <View className="flex flex-wrap lg:flex-row lg:flex-nowrap justify-between lg:gap-9 text-sm py-6">
                     <View className="sm:w-1/2 lg:w-1/3 sm:px-3 lg:px-0">
                         <View>
-                            <Image height={100} width={100} alt='' className="aspect-square" src="https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/0q4l2t9l4xeedv93k4tks4np5czd" />
+                            <Image height={448} width={448} alt='' className="aspect-square" src="https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/0q4l2t9l4xeedv93k4tks4np5czd" />
                         </View>
                         <View className="flex flex-col gap-3 py-6">
                             <Text className="font-bold">1. Book</Text>
@@ -26,7 +26,7 @@ function HowItWorks({ }: Props) {
                     </View>
                     <View className="sm:w-1/2 lg:w-1/3 sm:px-3 lg:px-0">
                         <View>
-                            <Image height={100} width={100} alt='' className="aspect-square" src="https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/2558oxl0r6co3m187p4o2h8mfml6" />
+                            <Image height={448} width={448} alt='' className="aspect-square" src="https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/2558oxl0r6co3m187p4o2h8mfml6" />
                         </View>
                         <View className="flex flex-col gap-3 py-6">
                             <Text className="font-bold">2. Wear</Text>
@@ -35,7 +35,7 @@ function HowItWorks({ }: Props) {
                     </View>
                     <View className="sm:px-3 lg:px-0 sm:w-full lg:w-1/3 sm:flex sm:flex-col sm:items-center lg:block">
                         <View className="sm:flex sm:justify-center lg:justify-start sm:w-1/2 lg:w-full">
-                            <Image width={100} height={100} alt='' className="aspect-square" src="https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/oaqy4pzn9q80ka80wwisaar63jqh" />
+                            <Image width={448} height={448} alt='' className="aspect-square" src="https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/oaqy4pzn9q80ka80wwisaar63jqh" />
                         </View>
                         <View className="flex flex-col gap-3 sm:w-1/2 lg:w-full py-6">
                             <Text className="font-bold">3. Return</Text>

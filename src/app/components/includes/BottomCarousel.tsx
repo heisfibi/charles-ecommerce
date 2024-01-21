@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import View from '../nativeLike/View'
 import Text from '../nativeLike/Text'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
@@ -15,13 +15,18 @@ type Props = {
 function BottomCarousel({ title }: Props) {
     const carRef = useRef<SwiperRef | null>(null)
     const counts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    const widthRef = useRef(0);
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-            widthRef.current = window.outerWidth
-        });
+    const [width, setWidth] = useState(0);
+    useEffect(() => { 
+        setWidth(window.outerWidth)
+        const handleResize = () => {
+            setWidth(window.outerWidth)
+        }
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, [])
-    
+
     return (
         <View className="w-full">
             <View>
@@ -44,7 +49,7 @@ function BottomCarousel({ title }: Props) {
                         loop={true}
                         ref={carRef}
                         spaceBetween={8}
-                        slidesPerView={widthRef.current > 1024 ? 4.2 : 1.6}
+                        slidesPerView={width > 1024 ? 4.2 : 1.6}
                         pagination={{ clickable: true }}>
                         {
                             counts.map((item, index) => {

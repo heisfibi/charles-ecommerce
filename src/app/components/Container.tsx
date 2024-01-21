@@ -10,7 +10,7 @@ type Props = {
 function Container({ children, preClassName, className, ...props }: Props) {
   return (
     <View className={`pre-container ${preClassName ?? ''}`}>
-      <View {...props} className={`container ${className ?? ''}`}>
+      <View {...props} className={`my-container ${className ?? ''}`}>
         {children}
       </View>
     </View>
