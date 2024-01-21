@@ -34,7 +34,7 @@ function Header({ }: Props) {
                             <div className="w-full flex justify-between items-center h-12 sm:h-16 lg:h-20  lg:px-[114px]">
                                 <div className="flex w-1/3">
                                     <Link href="/">
-                                        <img className="img img-fluid h-[37px]"
+                                        <Image width={100} height={100} className="img img-fluid h-[37px]"
                                             alt="John Lewis Rental logo"
                                             src="https://res.cloudinary.com/dcaptnlz3/image/asset/john_lewis-rental-logo-b2eb6c2dc485bb0c9acdac26ea426909.svg" />
                                     </Link>
@@ -46,7 +46,7 @@ function Header({ }: Props) {
                                             <div className="flex justify-center items-center">
                                                 <div className="flex border border-black w-[338px] focus-within:border-2 h-12 px-3">
                                                     <div className='flex items-center justify-center'>
-                                                        <img className="left-icon" alt='' src="https://res.cloudinary.com/dcaptnlz3/image/asset/search-b61a300bd1103c3c6929cfc083558a12.svg" />
+                                                        <Image width={100} height={100} className="left-icon" alt='' src="https://res.cloudinary.com/dcaptnlz3/image/asset/search-b61a300bd1103c3c6929cfc083558a12.svg" />
                                                     </div>
                                                     <input ref={mainInputRef} name="search_for" onInput={(e: any) => {
                                                         clearRef.current?.classList.add("hidden")
@@ -64,7 +64,7 @@ function Header({ }: Props) {
                                                             clearRef.current?.classList.remove("flex")
                                                         }
                                                     }} className='items-center justify-center outline-none hidden'>
-                                                        <img alt="Clear search bar" src="https://res.cloudinary.com/dcaptnlz3/image/asset/close-icon-a9a29f62a47bc7d408e473a7abbdfa60.svg" />
+                                                        <Image width={100} height={100} alt="Clear search bar" src="https://res.cloudinary.com/dcaptnlz3/image/asset/close-icon-a9a29f62a47bc7d408e473a7abbdfa60.svg" />
                                                     </Pressable>
                                                 </div>
                                             </div>
@@ -79,7 +79,7 @@ function Header({ }: Props) {
                                                 setIsPerson(!isPerson)
                                             }
                                         }}>
-                                            <img src="https://res.cloudinary.com/dcaptnlz3/image/asset/user-icon-552f796e9953ab41f25975b7a422ecd1.svg" />
+                                            <Image width={100} height={100} alt='' src="https://res.cloudinary.com/dcaptnlz3/image/asset/user-icon-552f796e9953ab41f25975b7a422ecd1.svg" />
                                         </Link>
                                         <div className="c-dropdown-content left-[-80px] w-[180px]">
                                             <div className="hidden lg:flex py-2 font-bold bg-white text-center flex-col border border-black text-xs">
@@ -92,9 +92,9 @@ function Header({ }: Props) {
                                     <Pressable className='lg:hidden flex items-center justify-center' onPress={() => { setDrawer(!isDrawer) }}>
                                         {
                                             isDrawer ?
-                                                <img alt="Menu" src="https://res.cloudinary.com/dcaptnlz3/image/asset/close-icon-a9a29f62a47bc7d408e473a7abbdfa60.svg" />
+                                                <Image width={100} height={100} alt="Menu" src="https://res.cloudinary.com/dcaptnlz3/image/asset/close-icon-a9a29f62a47bc7d408e473a7abbdfa60.svg" />
                                                 :
-                                                <img id="closeIcon" alt="Close" src="https://res.cloudinary.com/dcaptnlz3/image/asset/hamburguer-menu-9e39f5d51531c861903a4910c6a7d35d.svg" />
+                                                <Image width={100} height={100} id="closeIcon" alt="Close" src="https://res.cloudinary.com/dcaptnlz3/image/asset/hamburguer-menu-9e39f5d51531c861903a4910c6a7d35d.svg" />
                                         }
                                     </Pressable>
                                 </div>
@@ -103,7 +103,7 @@ function Header({ }: Props) {
                         <div className={`flex lg:hidden border-gray-200 h-12 gap-3 border px-3 focus-within:border-black`}>
                             <input name="search_for" placeholder="Type to search..." className="text-black grow outline-none" data-action="keyup->nav-secondary-search#toggleClearButton" type="text" id="listing_search_for" />
                             <div className='flex items-center justify-center'>
-                                <img className="left-icon" alt='' src="https://res.cloudinary.com/dcaptnlz3/image/asset/search-b61a300bd1103c3c6929cfc083558a12.svg" />
+                                <Image width={100} height={100} className="left-icon" alt='' src="https://res.cloudinary.com/dcaptnlz3/image/asset/search-b61a300bd1103c3c6929cfc083558a12.svg" />
                             </div>
                         </div>
                         <div className={`lg:hidden flex-col mt-9 lg:mt-0 font-medium ${isPerson ? "flex" : "hidden"}`}>
@@ -145,7 +145,7 @@ function Header({ }: Props) {
                                         <div className={`bg-white lg:bg-[#f5f5f5] w-100 absolute left-0 z-50 w-full bg-light-grey ${isClothing ? "" : "hidden"}`}>
                                             <Container>
                                                 <Pressable className="lg:hidden d-flex align-items-center justify-content-start pb-3 mb-3 d-block w-100 text-black flex items-center px-3" onPress={() => { setClothing(false) }}>
-                                                    <img src="https://res.cloudinary.com/dcaptnlz3/image/asset/chevron-left-eef602dd7d139738a76c90e8386c4564.svg" />
+                                                    <Image width={100} alt='' height={100} src="https://res.cloudinary.com/dcaptnlz3/image/asset/chevron-left-eef602dd7d139738a76c90e8386c4564.svg" />
                                                     <Text>Back</Text>
                                                 </Pressable>
                                                 <div className="row">

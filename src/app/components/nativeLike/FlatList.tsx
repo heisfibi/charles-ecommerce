@@ -123,6 +123,8 @@ const Item = ({ children, onIntercept }: {
 
 }
 
-export default forwardRef((props: Props, ref) => {
+const Component = forwardRef((props: Props, ref) => {
   return <FlatList myRef={ref} {...props} />
-})
+})  
+Component.displayName = 'FlatList';
+export default Component
