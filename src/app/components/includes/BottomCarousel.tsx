@@ -1,9 +1,9 @@
 'use client'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import View from '../nativeLike/View'
 import Text from '../nativeLike/Text'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
-import Pressable from '../nativeLike/Pressable' 
+import Pressable from '../nativeLike/Pressable'
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import ProductCard from '../cards/ProductCard'
@@ -15,6 +15,13 @@ type Props = {
 function BottomCarousel({ title }: Props) {
     const carRef = useRef<SwiperRef | null>(null)
     const counts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const widthRef = useRef(0);
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            widthRef.current = window.outerWidth
+        });
+    }, [])
+    
     return (
         <View className="w-full">
             <View>
@@ -37,7 +44,7 @@ function BottomCarousel({ title }: Props) {
                         loop={true}
                         ref={carRef}
                         spaceBetween={8}
-                        slidesPerView={window.outerWidth > 1024 ? 4.2 : 1.6}
+                        slidesPerView={widthRef.current > 1024 ? 4.2 : 1.6}
                         pagination={{ clickable: true }}>
                         {
                             counts.map((item, index) => {
