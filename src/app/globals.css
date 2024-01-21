@@ -3,27 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: #2D2F33;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src: url('../../public/fonts/Gill-Sans-Nova-Book/Gill-Sans-Nova-Book.woff') format('woff2'),
+    url('../../public/fonts/Gill-Sans-Nova-Book/Gill-Sans-Nova-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  @apply w-full lg:w-[940px] xl:w-[1175px] 2xl:w-[1328px]
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: rgb(var(--foreground-rgb)) !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply !text-xl
+}
+
+.swiper-pagination-bullet {
+  @apply border border-[#2D2F33] !bg-transparent;
+}
+.swiper-pagination-bullet-active{
+  @apply !bg-[#2D2F33]
+}
+
+.banner{
+  background: url("https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/p05725a7sq9mt6b4ahw69z2cxoun");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 640px) {
+  .banner{
+    background: url("https://res.cloudinary.com/dcaptnlz3/image/upload/f_auto,q_auto:best/ic093pw7p8qppap97mndt679qwit"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.pre-container {
+  @apply flex justify-center
+}
+
+.c-dropdown {
+  position: relative;
+  @apply cursor-pointer
+}
+
+.c-dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 50;
+}
+
+.c-dropdown:hover .c-dropdown-content {
+  display: block;
+}
+
+.c-dropdown:focus .c-dropdown-content {
+  display: block;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --foreground-rgb: #2D2F33;
+    --background-start-rgb: #FBF4E7;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
+  font-family: 'Gill Sans Nova', sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #FBF4E7;
+  @apply font-medium text-sm;
 }
 
 @layer utilities {
